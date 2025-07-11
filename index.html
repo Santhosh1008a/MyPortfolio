@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>personal portfolio website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/19c3b2b54c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/19c3b2b54c.js" crossorigin="anonymous"></script>
+  <style>
+    /* Responsive fixes for navigation and background */
+    @media only screen and (max-width: 768px) {
+      nav .fa-bars {
+        display: block;
+      }
+      nav ul {
+        background: #111;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease;
+      }
+      nav ul li {
+        display: block;
+        margin: 25px;
+      }
+      nav ul .fa-circle-xmark {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+      }
+      .header-text h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .header-text p {
+        font-size: 18px;
+      }
+      .about-col-1 img {
+        width: 100%;
+      }
+    }
+
+    #header {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('images/laptop-.jpg'); /* Update path if needed */
+    }
+
+    @media only screen and (max-width: 768px) {
+      #header {
+        background-position: top;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">services</a></li>
-                    <li><a href="#portfolio">My work</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Developer</p>
-                <h1>Hi,I'm <span>Santhosh Kumar</span><br>From India</h1>
-            </div>
-        </div>
-     </div>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/sandylogo.png" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">My Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Developer</p>
+        <h1>Hi, I'm <span>Santhosh Kumar</span><br />From India</h1>
+      </div>
+    </div>
+  </div> 
      <!-------------------about------------------->
      <div id="about">
         <div class="container">
@@ -200,29 +252,27 @@ Debugging and logical thinking</li>
         </div>
      </div>
 
-     <script>
+     
+    <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
+        function opentab(tabname) {
+            for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
     </script>
-
     <script>
         var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
+        function openmenu() {
             sidemenu.style.right = "0";
         }
-        function closemenu(){
+        function closemenu() {
             sidemenu.style.right = "-200px";
         }
     </script>
@@ -251,12 +301,5 @@ Debugging and logical thinking</li>
 });
 
 </script>
-
-
-
-
-
-
-
 </body>
 </html>
