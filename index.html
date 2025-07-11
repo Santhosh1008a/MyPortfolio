@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19c3b2b54c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">My work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Hi,I'm <span>Santhosh Kumar</span><br>From India</h1>
+            </div>
+        </div>
+     </div>
+     <!-------------------about------------------->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/work-1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey, I’m Sandy. I’m preparing to start my MCA and currently focusing on learning Data Structures and Algorithms to build a strong foundation in programming. I enjoy building things that actually work and help me learn by doing.
+
+Right now, I'm working on improving step by step — learning how to write better code, understand core concepts, and grow as a developer. I’m still figuring things out, but I’m serious about getting better every day.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C, C++ ,
+
+Python (problem solving,learning for DSA and basic scripting),java(basics)</li>
+                            <li><span>Web Develpoment</span><br>HTML, CSS,
+
+JavaScript (learning),
+
+React.js (beginner level)</li>
+                            <li><span>Backend & Database</span><br>Node.js + Express (basic understanding),
+
+MySQL (used for relational data),RDBMS,
+
+MongoDB (learning phase)</li>
+<li><span>Tools & Platforms</span><br>Git & GitHub,
+
+
+Postman,
+
+Netlify, Vercel (for simple deployments)</li>
+<li><span>Currently Learning</span><br>Data Structures and Algorithms,
+
+Clean UI/UX with Tailwind CSS,
+
+Real-world projects and code structure,
+
+Debugging and logical thinking</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li class="sub-title1"><span>2024–Present</span><br> ●Self-Taught Developer<br>●Learning DSA using Python<br>
+
+●Building web apps with React, Node.js, and MySQL<br>
+
+●Exploring machine learning basics and building simple ML models<br>
+
+●Gaining hands-on experience through personal projects and Git</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li class="sub-title1"><span>2025-2027</span><br><b>●Jain University,bangalore.</b><br>Master of Computer Application</li>
+                            <li class="sub-title1"><span>2025</span><br>●Karan arts and science college,Tiruvannamalai.<br>B.Sc.Computer Science</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!--------------------------services------------------->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>It integrates with APIs, data analysis, and file uploads to craft responsive, data-driven applications
+                        brainstorm UI/UX improvements, and convert designs into code efficiently.
+                      </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Web App Development</h2>
+                    <p>Creating functional web applications using React, Node.js, and APIs — including features like user login, real-time chat, and dynamic data fetching.
+                     </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Basic Machine Learning Models</h2>
+                    <p>Applying beginner-level machine learning techniques using Python on platforms like Kaggle. Able to build and experiment with simple models for predictions and analysis.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!------------------------------------------------portfolio----------------------------->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/skincare.png">
+                    <div class="layer">
+                        <h3>Skin Care</h3>
+                        <p>A responsive skincare product landing page built using HTML and CSS, focused on clean UI and mobile-friendly design.
+                        </p>
+                        <a href="https://santhosh1008a.github.io/ecommerce/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/quickchat.png">
+                    <div class="layer">
+                        <h3>QuickChat-App</h3>
+                        <p>A real-time chat application where users can log in, search and add contacts, and exchange messages in a clean, responsive interface.
+                        </p>
+                        <a href="https://chat-app-flame-theta.vercel.app/login"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/weatherApp.png">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>A weather application that fetches real-time weather data based on user input, using a clean UI and API integration for live updates.
+                        </p>
+                        <a href="https://santhosh1008a.github.io/weather-app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+     </div>
+
+     <!--------------------------contact-------------------------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>santhosh200510k@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9655348452</p> 
+                    <div class="social-icons">
+                        <a href="https://x.com/sandy1673727"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/santhosh-kumar-s-b71671323/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sand.y08ra/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61578137105152"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @sandy.Made with<i class="fa-solid fa-heart"></i> By sandy</p>
+        </div>
+     </div>
+
+     <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxifN9ErqbjtFG-F8btUuamZd_AT75FcOBPTlTh8rMk5_TU2I6rgSW7S8j0jjVbQYpa/exec';
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      if (response.ok) {
+        msg.innerHTML = "Message sent successfully";
+        form.reset();
+      } else {
+        msg.innerHTML = "Error sending message";
+      }
+      setTimeout(() => { msg.innerHTML = ""; }, 5000);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      msg.innerHTML = "Error sending message";
+      setTimeout(() => { msg.innerHTML = ""; }, 5000);
+    });
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
