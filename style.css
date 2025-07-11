@@ -394,3 +394,8 @@ nav .fas{
 
 
 }
+@media only screen and (min-width: 769px) {
+    nav ul .fa-circle-xmark {
+        display: none;
+    }
+}
